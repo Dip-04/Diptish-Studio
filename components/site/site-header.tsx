@@ -15,11 +15,11 @@ export function SiteHeader() {
           <div className="grid h-11 w-11 place-items-center rounded-2xl border border-white/10 bg-gradient-to-br from-cyan-400/20 to-fuchsia-500/20 shadow-[0_0_30px_rgba(168,85,247,0.25)]">
             <span className="text-lg font-black tracking-tight text-white">D</span>
           </div>
-          <div>
+          <div className="min-w-0">
             <p className="text-sm font-semibold tracking-[0.26em] text-cyan-100/80">
               {site.studio.toUpperCase()}
             </p>
-            <p className="text-xs text-slate-400">{site.role}</p>
+            {site.role ? <p className="truncate text-xs text-slate-400">{site.role}</p> : null}
           </div>
         </Link>
 
@@ -63,18 +63,35 @@ export function SiteHeader() {
       </div>
 
       {menuOpen ? (
-        <div className="border-t border-white/10 bg-black/60 px-4 py-4 lg:hidden">
-          <div className="mx-auto grid max-w-7xl gap-2">
+        <div className="border-t border-white/10 bg-black/70 px-4 py-4 lg:hidden">
+          <div className="mx-auto grid max-w-7xl gap-3">
             {navRoutes.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
                 onClick={() => setMenuOpen(false)}
-                className="rounded-2xl border border-white/8 bg-white/5 px-4 py-3 text-sm text-slate-200"
+                className="rounded-2xl border border-white/8 bg-white/5 px-4 py-3 text-sm text-slate-200 transition hover:border-cyan-400/30 hover:bg-white/10"
               >
                 {item.label}
               </a>
             ))}
+            <div className="grid grid-cols-2 gap-3 pt-1">
+              <a
+                href={site.github}
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-3 text-sm font-medium text-slate-100"
+              >
+                <Github className="h-4 w-4" />
+                GitHub
+              </a>
+              <a
+                href="/contact"
+                onClick={() => setMenuOpen(false)}
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-cyan-400 to-fuchsia-500 px-4 py-3 text-sm font-semibold text-slate-950"
+              >
+                Hire Me
+                <ArrowRight className="h-4 w-4" />
+              </a>
+            </div>
           </div>
         </div>
       ) : null}

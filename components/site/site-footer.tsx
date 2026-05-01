@@ -12,7 +12,7 @@ export function SiteFooter() {
             {site.studio}
           </p>
           <p className="mt-2 text-sm text-slate-400">
-            Premium websites and web apps that help businesses win trust online.
+            Premium websites and web apps shaped by 5+ years of real-world delivery to help businesses win trust online.
           </p>
         </div>
         <div className="flex flex-wrap items-center gap-3">
