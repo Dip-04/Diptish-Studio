@@ -99,11 +99,11 @@ export function HeroSection() {
             {site.availability}
           </p>
 
-          <h1 className="max-w-4xl text-4xl font-black leading-[0.95] tracking-tight text-white sm:text-6xl lg:text-7xl">
+          <h1 className="max-w-4xl text-5xl font-black leading-[0.95] tracking-tight text-white sm:text-6xl lg:text-7xl">
             {site.heroTitle}
           </h1>
 
-          <p className="mt-6 max-w-2xl text-base leading-7 text-slate-300 sm:text-xl">
+          <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300 sm:text-xl">
             {site.heroSubtitle}
           </p>
           <motion.p {...fadeUp} className="mt-4 max-w-2xl text-sm leading-7 text-slate-400 sm:text-base">
@@ -111,12 +111,12 @@ export function HeroSection() {
             clearer, the UI feels sharper, and the final result is built to convert.
           </motion.p>
 
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:gap-4">
+          <div className="mt-8 flex flex-col gap-4 sm:flex-row">
             <motion.a
               whileHover={{ scale: 1.03, y: -1 }}
               whileTap={{ scale: 0.98 }}
               href="/contact"
-              className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-cyan-400 to-fuchsia-500 px-5 py-3.5 text-sm font-semibold text-slate-950 shadow-[0_24px_70px_rgba(34,211,238,0.25)] transition hover:scale-[1.02] sm:w-auto sm:px-6"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-cyan-400 to-fuchsia-500 px-6 py-3.5 text-sm font-semibold text-slate-950 shadow-[0_24px_70px_rgba(34,211,238,0.25)] transition hover:scale-[1.02]"
             >
               Hire Me
               <ArrowRight className="h-4 w-4" />
@@ -125,7 +125,7 @@ export function HeroSection() {
               whileHover={{ scale: 1.03, y: -1 }}
               whileTap={{ scale: 0.98 }}
               href="/projects"
-              className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 py-3.5 text-sm font-semibold text-white transition hover:border-cyan-400/40 hover:bg-white/10 sm:w-auto sm:px-6"
+              className="inline-flex items-center justify-center gap-2 rounded-full border border-white/10 bg-white/5 px-6 py-3.5 text-sm font-semibold text-white transition hover:border-cyan-400/40 hover:bg-white/10"
             >
               View My Work
               <ExternalLink className="h-4 w-4" />
@@ -134,7 +134,7 @@ export function HeroSection() {
               whileHover={{ scale: 1.03, y: -1 }}
               whileTap={{ scale: 0.98 }}
               href="/contact"
-              className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-white/10 bg-black/20 px-5 py-3.5 text-sm font-semibold text-slate-100 transition hover:border-fuchsia-400/40 hover:bg-fuchsia-400/10 sm:w-auto sm:px-6"
+              className="inline-flex items-center justify-center gap-2 rounded-full border border-white/10 bg-black/20 px-6 py-3.5 text-sm font-semibold text-slate-100 transition hover:border-fuchsia-400/40 hover:bg-fuchsia-400/10"
             >
               Book Free Call
               <CalendarDays className="h-4 w-4" />
@@ -151,7 +151,7 @@ export function HeroSection() {
                 key={item.label}
                 variants={fadeUp}
                 whileHover={{ y: -6, scale: 1.01 }}
-              className="rounded-3xl border border-white/10 bg-white/5 p-4 shadow-[0_20px_80px_rgba(15,23,42,0.35)] backdrop-blur-xl sm:p-5"
+                className="rounded-3xl border border-white/10 bg-white/5 p-5 shadow-[0_20px_80px_rgba(15,23,42,0.35)] backdrop-blur-xl"
               >
                 <p className="text-3xl font-black tracking-tight text-white">{item.value}</p>
                 <p className="mt-2 text-sm text-slate-400">{item.label}</p>
@@ -166,24 +166,24 @@ export function HeroSection() {
             <motion.div
               whileHover={{ y: -4, rotate: -0.5 }}
               transition={{ type: "spring", stiffness: 160, damping: 18 }}
-              className="relative overflow-hidden rounded-[2.5rem] border border-white/10 bg-white/5 p-3 shadow-[0_40px_140px_rgba(2,6,23,0.55)] backdrop-blur-xl sm:p-4"
+              className="relative overflow-hidden rounded-[2.5rem] border border-white/10 bg-white/5 p-4 shadow-[0_40px_140px_rgba(2,6,23,0.55)] backdrop-blur-xl"
             >
-              <div className="relative aspect-[4/5] min-h-[420px] overflow-hidden rounded-[2rem] border border-white/10 bg-[#060c1c] sm:min-h-[500px] lg:min-h-[540px]">
+              <div className="relative aspect-[4/5] min-h-[540px] overflow-hidden rounded-[2rem] border border-white/10 bg-[#060c1c]">
                 <LaptopCanvas />
 
-                <div className="pointer-events-none absolute left-1/2 top-[18%] w-[84%] -translate-x-1/2 rounded-[1.2rem] border border-white/10 bg-black/45 p-3 shadow-[0_25px_90px_rgba(8,15,35,0.4)] backdrop-blur-xl sm:top-[21%] sm:w-[72%] sm:rounded-[1.4rem] sm:p-4">
+                <div className="pointer-events-none absolute left-1/2 top-[21%] w-[72%] -translate-x-1/2 rounded-[1.4rem] border border-white/10 bg-black/45 p-4 shadow-[0_25px_90px_rgba(8,15,35,0.4)] backdrop-blur-xl">
                   <div className="flex items-center justify-between">
                     <p className="text-xs font-semibold uppercase tracking-[0.28em] text-cyan-200/80">
                       Project preview
                     </p>
-                    <span className="rounded-full border border-cyan-400/20 bg-cyan-400/10 px-2 py-1 text-[9px] font-semibold text-cyan-100 sm:px-2.5 sm:text-[10px]">
+                    <span className="rounded-full border border-cyan-400/20 bg-cyan-400/10 px-2.5 py-1 text-[10px] font-semibold text-cyan-100">
                       Live-ready
                     </span>
                   </div>
-                  <h3 className="mt-2 text-base font-semibold text-white sm:mt-3 sm:text-lg">
+                  <h3 className="mt-3 text-lg font-semibold text-white">
                     Premium dashboard UI with conversion-first structure
                   </h3>
-                  <div className="mt-3 grid grid-cols-2 gap-2 text-[11px] text-slate-300 sm:mt-4 sm:gap-3 sm:text-xs">
+                  <div className="mt-4 grid grid-cols-2 gap-3 text-xs text-slate-300">
                     {["Clean UI", "Fast Loading", "SEO Ready", "Mobile First", "Conversion Focused", "Scalable Code"].map(
                       (chip) => (
                         <span
@@ -211,7 +211,7 @@ export function AboutSection() {
       <SectionHeading
         eyebrow="About"
         title="Built for businesses that want a premium online presence from a 5+ year product builder."
-        description="I'm Diptish Gohane, a full-stack developer focused on building modern, high-impact digital products for global businesses. From sleek landing pages to complex web applications, I deliver fast, scalable, and user-centric solutions using React, Next.js, Angular, Python, and SQL - designed to drive engagement and real business results."
+        description="I’m Diptish Gohane, a full-stack developer focused on building modern, high-impact digital products for global businesses. From sleek landing pages to complex web applications, I deliver fast, scalable, and user-centric solutions using React, Next.js, Angular, Python, and SQL - designed to drive engagement and real business results."
       />
 
       <div className="mt-12 grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
@@ -227,7 +227,7 @@ export function AboutSection() {
               <p className="text-sm uppercase tracking-[0.28em] text-cyan-100/80">
                 Business-first mindset
               </p>
-              <p className="mt-1 text-xl font-semibold text-white sm:text-2xl">Modern product thinking</p>
+              <p className="mt-1 text-2xl font-semibold text-white">Modern product thinking</p>
             </div>
           </div>
 
@@ -262,7 +262,7 @@ export function AboutSection() {
             <p className="text-xs font-semibold uppercase tracking-[0.32em] text-cyan-100/80">
               Experience
             </p>
-            <p className="mt-2 text-base font-semibold text-white sm:text-lg">
+            <p className="mt-2 text-lg font-semibold text-white">
               5+ years building responsive products for real businesses.
             </p>
           </div>
@@ -270,16 +270,16 @@ export function AboutSection() {
 
         <motion.div
           {...sectionMotion}
-          className="rounded-[2rem] border border-white/10 bg-white/5 p-4 shadow-[0_40px_120px_rgba(2,6,23,0.45)] backdrop-blur-xl sm:p-6"
+          className="rounded-[2rem] border border-white/10 bg-white/5 p-5 shadow-[0_40px_120px_rgba(2,6,23,0.45)] backdrop-blur-xl sm:p-6"
         >
-          <div className="rounded-[1.65rem] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.06),rgba(255,255,255,0.03))] p-3 sm:p-5">
+          <div className="rounded-[1.65rem] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.06),rgba(255,255,255,0.03))] p-4 sm:p-5">
             <motion.div {...staggerParent} className="flex flex-wrap gap-2">
               {skillTags.map((tag) => (
                 <motion.span
                   key={tag}
                   variants={fadeUp}
                   whileHover={{ scale: 1.05, y: -1 }}
-                  className="rounded-full border border-white/10 bg-black/25 px-2.5 py-2 text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-cyan-100 sm:px-3 sm:text-[0.72rem] sm:tracking-[0.24em]"
+                  className="rounded-full border border-white/10 bg-black/25 px-3 py-2 text-[0.72rem] font-semibold uppercase tracking-[0.24em] text-cyan-100"
                 >
                   {tag}
                 </motion.span>
@@ -296,14 +296,14 @@ export function AboutSection() {
                   src={aboutGallery[0].src}
                   alt={aboutGallery[0].alt}
                   loading="eager"
-                  className="h-[19rem] w-full object-cover transition duration-700 group-hover:scale-105 sm:h-[24rem] lg:h-[26rem]"
+                  className="h-[22rem] w-full object-cover transition duration-700 group-hover:scale-105 sm:h-[26rem]"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/72 via-black/15 to-transparent" />
                 <figcaption className="absolute inset-x-0 bottom-0 p-4">
-                  <p className="text-[0.58rem] font-semibold uppercase tracking-[0.28em] text-cyan-100/80 sm:text-[0.62rem] sm:tracking-[0.34em]">
+                  <p className="text-[0.62rem] font-semibold uppercase tracking-[0.34em] text-cyan-100/80">
                     {aboutGallery[0].title}
                   </p>
-                  <p className="mt-2 max-w-xl text-xs leading-5 text-slate-200/90 sm:text-sm sm:leading-6">
+                  <p className="mt-2 max-w-xl text-sm leading-6 text-slate-200/90">
                     {aboutGallery[0].caption}
                   </p>
                 </figcaption>
@@ -321,14 +321,14 @@ export function AboutSection() {
                       src={shot.src}
                       alt={shot.alt}
                       loading="lazy"
-                      className="h-[11rem] w-full object-cover transition duration-700 group-hover:scale-105 sm:h-[13rem]"
+                      className="h-[13rem] w-full object-cover transition duration-700 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/72 via-black/15 to-transparent" />
                     <figcaption className="absolute inset-x-0 bottom-0 p-4">
-                      <p className="text-[0.58rem] font-semibold uppercase tracking-[0.28em] text-cyan-100/80 sm:text-[0.62rem] sm:tracking-[0.34em]">
+                      <p className="text-[0.62rem] font-semibold uppercase tracking-[0.34em] text-cyan-100/80">
                         {shot.title}
                       </p>
-                      <p className="mt-2 text-xs leading-5 text-slate-200/90 sm:text-sm sm:leading-6">{shot.caption}</p>
+                      <p className="mt-2 text-sm leading-6 text-slate-200/90">{shot.caption}</p>
                     </figcaption>
                   </motion.figure>
                 ))}
@@ -735,14 +735,7 @@ export function ContactSection() {
             </a>
           </div>
 
-          <div className="mt-6 rounded-2xl border border-white/10 bg-gradient-to-br from-cyan-400/10 to-fuchsia-500/10 p-5">
-            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-white/80">
-              Direct inbox
-            </p>
-            <p className="mt-2 text-lg font-semibold text-white">
-              Send the form and it will email me directly.
-            </p>
-          </div>
+        
         </div>
 
         <form
@@ -784,7 +777,7 @@ export function ContactSection() {
             type="submit"
             className="mt-5 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-cyan-400 to-fuchsia-500 px-6 py-3.5 text-sm font-semibold text-slate-950 transition hover:scale-[1.02]"
           >
-            Send Direct Email
+            Send Email
             <ArrowRight className="h-4 w-4" />
           </button>
         </form>
@@ -792,5 +785,4 @@ export function ContactSection() {
     </section>
   );
 }
-
 
